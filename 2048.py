@@ -116,33 +116,21 @@ def mergeTiles():
 
 
 #  this module helps in getting an random tile 
-# def placeRandomTile():
-#     c = 0
-#     for i in range(0,BOARD_SIZE):
-#         for j in range(0,BOARD_SIZE):
-#             if tileMatrix[i][j] == 0:
-#                 c += 1
-    
-#     k = floor(random() * BOARD_SIZE * BOARD_SIZE)
-#     print("click")
-
-#     while tileMatrix[floor(k/BOARD_SIZE)][k%BOARD_SIZE] != 0:
-#         k = floor(random() * BOARD_SIZE * BOARD_SIZE)
-
-#     tileMatrix[floor(k/BOARD_SIZE)][k%BOARD_SIZE] = 2
 def placeRandomTile():
-	count = 0
-	for i in range(0, BOARD_SIZE):
-		for j in range(0, BOARD_SIZE):
-			if tileMatrix[i][j] == 0:
-				count += 1
+    c = 0
+    for i in range(0,BOARD_SIZE):
+        for j in range(0,BOARD_SIZE):
+            if tileMatrix[i][j] == 0:
+                c += 1
+    
+    k = floor(random() * BOARD_SIZE * BOARD_SIZE)
+    print("click")
 
-	k = floor(random() * BOARD_SIZE * BOARD_SIZE)
+    while tileMatrix[floor(k/BOARD_SIZE)][k%BOARD_SIZE] != 0:
+        k = floor(random() * BOARD_SIZE * BOARD_SIZE)
 
-	while tileMatrix[floor(k / BOARD_SIZE)][k % BOARD_SIZE] != 0:
-		k = floor(random() * BOARD_SIZE * BOARD_SIZE)
+    tileMatrix[floor(k/BOARD_SIZE)][k%BOARD_SIZE] = 2
 
-	tileMatrix[floor(k / BOARD_SIZE)][k % BOARD_SIZE] = 2
 
 
 #  this is used to get floor value out of the given value to the module
